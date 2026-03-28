@@ -8,6 +8,11 @@ def test_hello():
     assert response.status_code == 200
     assert response.json() == {"message": "Hello World"}
 
+def test_hello2():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert response.json() == {"message": "Hello World"}
+
 def test_add_positive_numbers():
     response = client.get("/add/2/3")
     assert response.status_code == 200
